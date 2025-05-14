@@ -1,0 +1,28 @@
+AI Sentiment and Trust Dashboard
+│
+├── dashboard.py                # Main Streamlit app file contains all dashboard functions
+├── trainModel.py               # Fine tuning logic using HuggingFace Trainer
+├── predictionPipeline.py       # Batch sentiment/trust score generation pipeline
+├── cleanData.py                # Data cleaning + train/test splitting function
+├── trustScore.py               # Custom trust scoring algorithm
+├── jsonCsvConverter.py         # Converts Kaggle Amazon review JSON files to CSV
+├── saveTokenizer.py            # Saves the tokenizer for later use (optional)
+│
+├── requirements.txt            # Lists all required Python libraries and packages
+│
+├── venv/                       # Python virtual environment
+│
+├── data/
+│   ├── raw/                    # Contains raw review data (e.g., original JSON/CSV files)
+│   └── processed/              # Stores cleaned/processed and labeled datasets
+│       ├── train_clean.csv
+│       ├── test_clean.csv
+│       └── reviews_with_scores.csv
+│
+├── fine_tuned_model/          # DistilBERT saved model directory after training
+│   ├── config.json
+│   ├── pytorch_model.bin
+│   ├── tokenizer_config.json
+│   └── vocab.txt
+│
+└── results/                   #HuggingFace checkpoints saved during training
